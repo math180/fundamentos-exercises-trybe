@@ -16,3 +16,14 @@ console.log(a - b);
 console.log(a * b);
 console.log(a / b);
 console.log(a % b);
+
+// 2 -Faça um programa que retorne o maior de dois números. Defina no começo do programa duas constantes com os valores que serão comparados.
+
+let number1 = 5
+let number2 = 4
+
+if (number1 > number2) {
+    console.log(number1);
+} else {
+    console.log(number2);
+}
