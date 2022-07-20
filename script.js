@@ -121,6 +121,16 @@ if (nota < 0 || nota > 100) {
 
 //8- 🚀 Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
 
+let firstNumber = 9;
+let secondNumber = 3;
+let thirdNUmber = 3;
+
+if (firstNumber % 2 === 0 || secondNumber % 2 === 0 || thirdNUmber % 2 === 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
 //9- Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
 
 
