@@ -72,6 +72,26 @@ if (anguloA < 0 || anguloB < 0 || anguloC < 0) {
 
 //6- Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
 
+let pecaXadrez = 'RAINHA';
+
+switch (pecaXadrez.toLowerCase()) {
+    case 'peão':
+        console.log('Os peões se movem somente para frente, uma casa por vez.');
+        break
+    case 'bispo':
+        console.log('O bispo pode mover-se por qualquer número de casas, mas somente nas diagonais e até que outra peça esteja no caminho.');
+        break
+    case 'cavalo':
+        console.log('Ele pode andar duas casas na horizontal e uma na vertical, ou duas na vertical e uma na horizontal, uma na horizontal e duas na vertical, e assim por diante');
+        break
+    case 'torre':
+        console.log('A torre se move em linha reta horizontalmente e verticalmente pelo número de casas não ocupadas, até atingir o final do tabuleiro ou ser bloqueado por outra peça');
+        break
+    case 'rainha':
+        console.log('Ela pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente. A rainha se move como a torre e o bispo combinados.');
+        break
+}
+
 /* 7- Escreva um programa que converte uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. Siga essas regras:
 Porcentagem >= 90 -> A
 Porcentagem >= 80 -> B
