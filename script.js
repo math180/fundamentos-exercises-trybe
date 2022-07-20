@@ -101,6 +101,24 @@ Porcentagem >= 50 -> E
 Porcentagem < 50 -> F
 O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100. */
 
+let nota = 99;
+
+if (nota < 0 || nota > 100) {
+    console.log('Erro. Insira um número válido');
+} else if (nota >= 90) {
+    console.log('Nota A');
+} else if (nota >= 80) {
+    console.log('Nota B');
+} else if (nota >= 70) {
+    console.log('Nota C');
+} else if (nota >= 60) {
+    console.log('Nota D');
+} else if (nota >= 50) {
+    console.log('NOta E');
+} else if (nota < 50) {
+    console.log('Nota F');
+}
+
 //8- 🚀 Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false.
 
 //9- Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
