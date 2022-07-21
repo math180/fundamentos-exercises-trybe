@@ -49,3 +49,17 @@ for (let i = 1; i < numbers3.length; i += 1) {
         maiorNumero = numbers3[i]
     }
 } console.log(maiorNumero);
+
+//6- Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+
+let numbers4 = [2, 9, 2, 20, 80, 8, 10, 2, 4, 30];
+let numerosImpares = 0;
+for (let i = 0; i < numbers4.length; i += 1) {
+    if (numbers4[i] % 2 !== 0) {
+    numerosImpares += 1
+  } 
+} if (numerosImpares === 0) {
+    console.log('Nenhum valor ímpar encontrado');
+} else {
+    console.log(numerosImpares);
+}
