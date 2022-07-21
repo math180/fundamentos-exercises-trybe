@@ -37,3 +37,15 @@ if (mediaAritmetica < 20) {
 } else {
     console.log('Valor maior ou igual a 20');
 }
+
+//5- 🚀 Utilizando for, descubra qual o maior valor contido no array e imprima-o;
+
+let numbers3 = [100.001, 9, 3, 19, 100.0001, 8, 100, 2, 35, 27];
+
+let maiorNumero = numbers3[0]
+
+for (let i = 1; i < numbers3.length; i += 1) {
+    if (numbers3[i] > maiorNumero) {
+        maiorNumero = numbers3[i]
+    }
+} console.log(maiorNumero);
