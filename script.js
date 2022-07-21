@@ -54,6 +54,7 @@ for (let i = 1; i < numbers3.length; i += 1) {
 
 let numbers4 = [2, 9, 2, 20, 80, 8, 10, 2, 4, 30];
 let numerosImpares = 0;
+
 for (let i = 0; i < numbers4.length; i += 1) {
     if (numbers4[i] % 2 !== 0) {
     numerosImpares += 1
@@ -63,3 +64,16 @@ for (let i = 0; i < numbers4.length; i += 1) {
 } else {
     console.log(numerosImpares);
 }
+
+//7- Utilizando for, descubra qual o menor valor contido no array e imprima-o;
+
+let numbers5 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+
+let menorNumero = numbers5[0];
+
+for (let i = 1; i < numbers5.length; i += 1) {
+    if (numbers5[i] < menorNumero) {
+        menorNumero = numbers5[i]
+    }
+} console.log(menorNumero);
+
