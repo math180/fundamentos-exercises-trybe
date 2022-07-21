@@ -133,5 +133,14 @@ if (firstNumber % 2 === 0 || secondNumber % 2 === 0 || thirdNUmber % 2 === 0) {
 
 //9- Escreva um programa que defina três números em constantes e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false.
 
+let primeiroNumero = 2;
+let segundoNumero = 4;
+let terceiroNumero = 10;
+
+if (primeiroNumero % 2 !== 0 || segundoNumero % 2 !== 0 || terceiroNumero % 2 !== 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
 
 //10- 
