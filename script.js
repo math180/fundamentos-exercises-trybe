@@ -144,3 +144,17 @@ if (primeiroNumero % 2 !== 0 || segundoNumero % 2 !== 0 || terceiroNumero % 2 !=
 }
 
 //10- 
+
+let custo = 1 * 0.2
+let venda = 1 * 1000
+
+let custoTotal = custo * 1000
+
+if (custo < 0 || venda < 0) {
+    console.log('Erro. O(s) valor(es) não pode(m) ser negativo(s)');
+}
+
+let lucro = venda - custoTotal
+
+console.log(lucro);
+
