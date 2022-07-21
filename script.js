@@ -143,7 +143,13 @@ if (primeiroNumero % 2 !== 0 || segundoNumero % 2 !== 0 || terceiroNumero % 2 !=
     console.log(false);
 }
 
-//10- 
+/* 10- Escreva um programa que se inicie com dois valores em duas constantes diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+Atente que, sobre o custo do produto, incide um imposto de 20%.
+Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos seus valores de entrada seja menor que zero.
+O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
+valorCustoTotal = valorCusto + impostoSobreOCusto
+lucro = valorVenda - valorCustoTotal (lucro de um produto)
+ */
 
 let custo = 1 * 0.2
 let venda = 1 * 1000
@@ -158,3 +164,59 @@ let lucro = venda - custoTotal
 
 console.log(lucro);
 
+/*11- Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
+A notação para um salário de R$1500,10, por exemplo, deve ser 1500.10. Para as faixas de impostos, use as seguintes referências:
+INSS (Instituto Nacional do Seguro Social)
+
+Salário bruto até R$ 1.556,94: alíquota de 8%
+
+Salário bruto de R$ 1.556,95 a R$ 2.594,92: alíquota de 9%
+
+Salário bruto de R$ 2.594,93 a R$ 5.189,82: alíquota de 11%
+
+Salário bruto acima de R$ 5.189,82: alíquota máxima de R$ 570,88
+
+IR (Imposto de Renda)
+
+Até R$ 1.903,98: isento de imposto de renda
+
+De R$ 1.903,99 a 2.826,65: alíquota de 7,5% e parcela de R$ 142,80 a deduzir do imposto
+
+De R$ 2.826,66 a R$ 3.751,05: alíquota de 15% e parcela de R$ 354,80 a deduzir do imposto
+
+De R$ 3.751,06 a R$ 4.664,68: alíquota de 22,5% e parcela de R$ 636,13 a deduzir do imposto
+
+Acima de R$ 4.664,68: alíquota de 27,5% e parcela de R$ 869,36 a deduzir do imposto. 
+*/
+
+let salarioBruto = 1400
+let aliquotaINSS = 0
+
+if (salarioBruto < 1556.94) {
+  aliquotaINSS = salarioBruto * 0.08
+} else if (salarioBruto < 2594.92) {
+  aliquotaINSS = salarioBruto * 0.09
+} else if (salarioBruto < 5189.82) {
+  aliquotaINSS = salarioBruto * 0.11
+} else if (salarioBruto > 5189.82) {
+  aliquotaINSS = 570.88
+}
+
+let salarioSemINSS = salarioBruto - aliquotaINSS
+let aliquotaIR = 0
+
+if (salarioSemINSS < 1903.98) {
+    aliquotaIR = 0
+} else if (salarioSemINSS < 2826.65) {
+    aliquotaIR = salarioSemINSS * 0.075
+} else if (salarioSemINSS < 3751.05) {
+    aliquotaIR = salarioSemINSS * 0.15
+} else if (salarioSemINSS < 4664.68) {
+    aliquotaIR = salarioSemINSS * 0.225
+} else if (salarioSemINSS < 4664.68) {
+    aliquotaIR = salarioSemINSS * 0.275
+}
+
+let salarioLiquido = salarioSemINSS - aliquotaIR
+
+console.log(salarioLiquido);
