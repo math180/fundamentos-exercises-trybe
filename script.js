@@ -20,7 +20,7 @@ console.log(somaDosNumeros);
 
 //3- calcule e imprima a média aritmética dos valores contidos no array;
 
-let numbers2 = [30, 8, 4, 20, 70, 10, 100, 25, 35, 30];
+let numbers2 = [4.5, 8, 10, 30, 7, 40, 10, 25, 35, 30];
 
 let mediaAritmetica = 0;
 
@@ -29,3 +29,11 @@ for (let i = 0; i < numbers2.length; i += 1) {
 }
 
 console.log(mediaAritmetica);
+
+//4- Com o mesmo código do exercício anterior, caso o valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+
+if (mediaAritmetica < 20) {
+    console.log('Valor menor ou igual a 20');
+} else {
+    console.log('Valor maior ou igual a 20');
+}
