@@ -113,3 +113,31 @@ for (let i = 0; i < numerosSorteados.length; i += 1) {
         }
     }
 } console.log(numerosAcertados);
+
+// exercicios mentoria
+
+/*1. Encontre o index através do valor de um elemento
+Escreva uma algoritmo que recebe 2 parâmetros:
+ - Um array contendo um conjunto de números
+ - O valor de um desses elementos
+Procure esse elemento dentro do array, e imprima no terminal a posição index em que o elemento encontra-se.
+Caso não o encontre, imprima:
+-----------------------------------
+"Elemento não encontrado no array"
+----------------------------------- */
+
+let newArray = [1, 4, 10, 40];
+let sameNumber = false;
+let elemento = 55;
+
+for (let i = 0; i < newArray.length; i += 1) {
+
+  if (elemento === newArray[i]) {
+    console.log([i]);
+    sameNumber = true
+  } 
+}
+
+if (sameNumber !== true) {
+    console.log('ELemento não encontrado');
+}
