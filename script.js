@@ -141,3 +141,30 @@ for (let i = 0; i < newArray.length; i += 1) {
 if (sameNumber !== true) {
     console.log('ELemento não encontrado');
 }
+
+/* 
+2. Retorne os números ímpares
+A Dora aventureira gostaria de ter uma lista com todos o números ímpares entre 1 e 50.
+Escreva um algoritmo que imprima no terminal uma string com todos os números inteiros ímpares desse intervalo.
+Use a seguinte estrutura na impressão:
+----------------
+"x, y, z, ...n"
+----------------
+*/
+let emptyArray = [];
+let arrayImpares = [];
+let impressao = '';
+
+for (let i = 1; i <= 50; i += 1) {
+    emptyArray.push(i)
+} 
+
+for (let i = 0; i < emptyArray.length; i += 1) {
+    if (emptyArray[i] % 2 !== 0) {
+        arrayImpares.push(emptyArray[i])
+    }
+} 
+
+for (let i = 0; i < arrayImpares.length; i += 1) {
+    impressao += arrayImpares[i] + ', '
+} console.log(impressao);
