@@ -168,3 +168,32 @@ for (let i = 0; i < emptyArray.length; i += 1) {
 for (let i = 0; i < arrayImpares.length; i += 1) {
     impressao += arrayImpares[i] + ', '
 } console.log(impressao);
+
+/*3- Números divisíveis por 3
+Escreva um algoritmo que cria uma sequência numérica de inteiros com intervalo de 1 entre eles. O algoritmo
+deve receber antes de criar essa sequência, o valor inicial e final.
+Conte os números divisíveis por 3 da sequência e imprima no terminal condicionando:
+Se houver 50 ou mais:
+---------------------------------------
+"Há 50 ou mais números diviseis por 3"
+---------------------------------------
+Caso o contrário:
+--------------------------
+"Sequência muito pequena."
+*/
+
+let numeroFinal = 150;
+let numeroInicial = 1;
+let contador = 0;
+
+for (let i = numeroInicial; i <= numeroFinal; i += 2) {
+    if (i % 3 === 0) {
+        contador += 1
+    }
+}
+
+if (contador > 50) {
+    console.log('Existem mais de 50 números');
+} else {
+    console.log('Sequência muito pequena');
+}
