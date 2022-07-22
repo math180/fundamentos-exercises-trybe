@@ -92,3 +92,24 @@ for (let i = 0; i < array.length; i += 1) {
     divisao.push(array[i] / 2)
 } 
 console.log(divisao);
+
+//10- exercicio loteria
+
+let numerosSorteados = []
+let meusNumeros = [58, 7, 31, 44, 26, 17 ]
+
+for (let i = 0; i < 6; i += 1) {
+    let numerosRandom = Math.floor(Math.random() * 60) + 1;
+    numerosSorteados.push(numerosRandom)
+}
+console.log(numerosSorteados);
+
+let numerosAcertados = 0
+
+for (let i = 0; i < numerosSorteados.length; i += 1) {
+    for (let i2 = 0; i2 < meusNumeros.length; i2 += 1) {
+        if (numerosSorteados[i] === meusNumeros[i2]) {
+            numerosAcertados += 1
+        }
+    }
+} console.log(numerosAcertados);
