@@ -21,6 +21,15 @@ for (let i = word.length-1; i >= 0; i -= 1) {
 }
 console.log(wordInvert);
 
+// Other possible solution 
+
+let word2 = 'socorram me subi no ônibus em marrocos';
+let reverseWord = '';
+
+reverseWord = word2.split('').reverse().join('');
+
+console.log(reverseWord);
+
 // 3- Escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
 
 let array = ['java', 'javascript', 'python', 'html', 'css'];
