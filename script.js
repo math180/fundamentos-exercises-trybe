@@ -84,3 +84,27 @@ for (let i = 2; i <= 50; i += 1) {
         }
     }
 } console.log(biggestPrime);
+
+/* Bônus
+
+1- Agora vamos trabalhar com algumas formas geométricas! Faça um programa que, dado um valor n qualquer, seja n > 1, imprima na tela um quadrado feito de asteriscos de lado de tamanho n. Por exemplo:
+
+n = 5
+
+*****
+*****
+*****
+*****
+*****
+*/
+
+let numero = 7;
+
+for (let i = 0; i < numero; i += 1) {
+    let space = ''
+
+    for (let i2 = 0; i2 < numero; i2 += 1) {
+        space = space + '*'
+    }
+    console.log(space);
+} 
