@@ -108,3 +108,24 @@ for (let i = 0; i < numero; i += 1) {
     }
     console.log(space);
 } 
+
+/* 2- Para o segundo exercício, faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base. Por exemplo:
+
+n = 5
+
+*
+**
+***
+****
+*****
+
+*/
+
+let size = 7;
+let symbol = '*';
+let inputLine = '';
+
+for (let i = 0; i < size; i += 1) {
+    console.log(inputLine);
+    inputLine = inputLine + symbol
+}
