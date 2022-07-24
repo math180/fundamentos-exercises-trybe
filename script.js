@@ -49,3 +49,38 @@ for (let i = 0; i < array.length; i += 1) {
 
 console.log(`The smallest word is: ${smallestWord}`);
 console.log(`The biggest word is: ${biggestWord}`);
+
+// 4- Um número primo é um número inteiro maior do que 1 que possui somente dois divisores, ou seja, é divisível por 1 e por ele mesmo. Sabendo disso, escreva um algoritmo que retorne o maior número primo entre 2 e 50.
+
+let biggestPrimeNumber = 0;
+
+for (let i = 2; i <= 50; i += 1) {
+  let isPrime = true;
+
+  for (let i2 = 2; i2 < i; i2 +=1)  {
+    if (i % i2 === 0) {
+        isPrime = false
+     }
+    }
+    if (isPrime) {
+        biggestPrimeNumber = i
+    }
+  }
+ console.log(biggestPrimeNumber);
+
+// PRIMEIRA TENTATIVA
+
+let biggestPrime = 2;
+
+for (let i = 2; i <= 50; i += 1) {
+
+    for (let i2 = 2; i2 <= 50; i2 += 1) {
+        if (i % i2 === 0) {
+            if (i > biggestPrime) {
+                biggestPrime = i
+            } else {
+                biggestPrime = i2
+            }
+        }
+    }
+} console.log(biggestPrime);
