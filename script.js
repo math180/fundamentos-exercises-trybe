@@ -80,3 +80,12 @@ leitor.livrosFavoritos.push( {
 // 🚀 8 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: "Julia tem 2 livros favoritos".
 
 console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos`);
+
+
+// Desafio 4
+
+let array = ['ola', 'sou eu mesmo', 'selena gomez']
+
+function concatName(array) {
+  return array.length-1 + "" + array[0]
+} 
