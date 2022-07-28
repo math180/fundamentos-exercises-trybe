@@ -89,6 +89,12 @@
     } modifyAllText()
 //6- Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 
+  function showAllTagsP() {
+    const showsAllTags = document.getElementsByTagName('p');
+    for (let i = 0; i <showsAllTags.length; i += 1) {
+      console.log(showsAllTags[i]);
+    }
+  } showAllTagsP()
 
   </script>
 </body>
