@@ -61,7 +61,7 @@
 
     function changeColor() {
       const changeFirstColor = document.getElementsByClassName('main-content')[0];
-      changeFirstColor.style.backgroundColor = 'green'
+      changeFirstColor.style.backgroundColor = 'rgb(76,164,109)'
     } changeColor()
 
     //3- Crie e execute uma função que mude a cor do quadrado vermelho para branco.
@@ -70,11 +70,16 @@
       const changeOtherColor = document.getElementsByClassName('center-content')[0];
       changeOtherColor.style.backgroundColor = 'white'
     } changeNewColor()
-    
-//4- Crie e execute uma função que corrija o texto da tag <h1>.
+
+    //4- Crie e execute uma função que corrija o texto da tag <h1>.
+
+    function correctText() {
+      const correctWrongText = document.getElementsByTagName('h1')[0];
+      correctWrongText.innerHTML = 'Exercício 5.1 - JavaScript'
+    } correctText()
 
 //5- Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
-
+   
 //6- Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
 
 
