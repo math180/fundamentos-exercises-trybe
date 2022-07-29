@@ -105,8 +105,8 @@
     //8- 🚀 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
 
     function createListLi() {
-
-      const createList = document.createElement('ol');
+      
+      const createList = document.createElement('ul');
       addTagSection2.appendChild(createList);
 
       let arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
@@ -163,6 +163,12 @@
 
     addTagSection2.parentElement.style.backgroundColor = 'green'
 
+    //6- 🚀 Remova os dois últimos elementos (nove e dez) da lista criada no passo 8.
+
+    let getLi = document.getElementsByTagName('li');
+
+    getLi[9].remove()
+    getLi[8].remove()
 
   </script>
 </body>
