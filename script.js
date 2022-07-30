@@ -130,3 +130,16 @@ function biggestNumber(array) {
   }
   return biggerNumber
 }console.log(BiggestNumber([1, 4, 10, -300, 256, 255]));*/
+
+//3 - Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+
+function smallestIndex(array) {
+  let smallestI = 0;
+
+  for(let index in array) {
+    if (array[smallestI] > array[index]) {
+      smallestI = index
+    }
+  } return smallestI;
+} console.log(smallestIndex([10, 3, 0]));
+
