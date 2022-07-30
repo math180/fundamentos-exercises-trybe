@@ -188,3 +188,12 @@ function mostRepeated(array) {
 }
 console.log(mostRepeated([1, 1, 1, 3, 3, 3, 5, 3, 3, 3, 5]));
 
+//6-Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+
+function countNumbers(naturalNumber) {
+  let sum = 0;
+  for(let i = 1; i <= naturalNumber; i += 1) {
+    sum = sum + i
+  }
+  return sum; 
+} console.log(countNumbers(10));
