@@ -86,6 +86,18 @@ console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favorito
 // 1 - Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
 
 function isPalindrome(string) {
+  let newString = string.split('').reverse().join('');
+
+  if (newString === string) {
+    return true
+  } else {
+    return false
+  }
+} console.log(isPalindrome('arara'))
+
+
+/*
+function isPalindrome(string) {
   let isPalindrome = false;
   const myArray = string.split('');
   myArray.reverse()
@@ -96,11 +108,13 @@ function isPalindrome(string) {
   } else {
     return isPalindrome
   }
-} console.log(isPalindrome('reviver'));
+} console.log(isPalindrome('reviver'));*/
 
 // 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
-function BiggestNumber(array) {
+
+
+/*function BiggestNumber(array) {
   let biggerNumber = array[0];
   for(let i = 0; i < array.length; i += 1) {
     if (array[i] > biggerNumber) {
@@ -108,4 +122,4 @@ function BiggestNumber(array) {
     }
   }
   return biggerNumber
-}console.log(BiggestNumber([-2.1, -4, -10, -300, -2, -50]));
+}console.log(BiggestNumber([1, 4, 10, -300, 256, 255]));*/
