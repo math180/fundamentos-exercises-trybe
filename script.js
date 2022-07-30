@@ -143,3 +143,13 @@ function smallestIndex(array) {
   } return smallestI;
 } console.log(smallestIndex([10, 3, 0]));
 
+//4- Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+function biggestString(array) {
+  let biggestString = array[0]
+  for (let index in array) {
+    if (biggestString.length < array[index].length) {
+      biggestString = array[index];
+    }
+  } return biggestString
+} console.log(biggestString(['Amor', 'Paixão', 'Eterna amizade', 'Paz']));
