@@ -96,4 +96,16 @@ function isPalindrome(string) {
   } else {
     return isPalindrome
   }
-} console.log(isPalindrome('arara'));
+} console.log(isPalindrome('reviver'));
+
+// 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+
+function BiggestNumber(array) {
+  let biggerNumber = array[0];
+  for(let i = 0; i < array.length; i += 1) {
+    if (array[i] > biggerNumber) {
+      biggerNumber = array[i];
+    }
+  }
+  return biggerNumber
+}console.log(BiggestNumber([-2.1, -4, -10, -300, -2, -50]));
