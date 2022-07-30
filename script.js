@@ -81,11 +81,19 @@ leitor.livrosFavoritos.push( {
 
 console.log(`${leitor.nome} tem ${leitor.livrosFavoritos.length} livros favoritos`);
 
+// Parte 2 - Funções 
 
-// Desafio 4
+// 1 - Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
 
-let array = ['ola', 'sou eu mesmo', 'selena gomez']
+function isPalindrome(string) {
+  let isPalindrome = false;
+  const myArray = string.split('');
+  myArray.reverse()
+ const join = myArray.join('')
 
-function concatName(array) {
-  return array.length-1 + "" + array[0]
-} 
+  if (join === string) {
+    return true;
+  } else {
+    return isPalindrome
+  }
+} console.log(isPalindrome('arara'));
