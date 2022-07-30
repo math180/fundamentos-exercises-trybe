@@ -112,7 +112,14 @@ function isPalindrome(string) {
 
 // 2 - Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
 
-
+function biggestNumber(array) {
+  let biggestIndex = 0;
+  for (let index in array) {
+    if (array[biggestIndex] < array[index]) {
+      biggestIndex = index;
+    }
+  } return biggestIndex;
+} console.log(biggestNumber([1, 4, 3, 10]));
 
 /*function BiggestNumber(array) {
   let biggerNumber = array[0];
