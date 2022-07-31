@@ -69,6 +69,7 @@ Adicione a este botão a ID "btn-holiday"
 Adicione este botão como filho/filha da tag <div> com classe "buttons-container" */
 
 const getTag = document.getElementsByClassName("buttons-container")[0];
+
 function createButton(string) {
   const createBtn = document.createElement("button");
   createBtn.id = "btn-holiday";
@@ -113,10 +114,25 @@ Adicione esse botão como filho/filha da tag <div> com classe "buttons-container
 
 */
 
+const createbtn2 = document.createElement("button");
+
 function createDay(string) {
-  const createbtn2 = document.createElement("button");
   createbtn2.id = "btn-friday";
   getTag.appendChild(createbtn2);
   createbtn2.innerHTML = string;
 }
 createDay("Sexta-feira");
+
+/*🚀 Exercício 5:
+Implemente uma função que modifica o texto exibido nos dias que são Sexta-feira. Adicione ao botão "Sexta-feira" um evento de "click" e modifique o texto a ser exibido nos dias que são sextas-feiras.
+
+👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial exibindo os dias.*/
+const getFriday = document.querySelectorAll(".friday");
+
+function getAllFridays() {
+  for (let i = 0; i < getFriday.length; i += 1) {
+    getFriday[i].innerHTML = "Sextou!!";
+  }
+}
+
+createbtn2.addEventListener("click", getAllFridays);
