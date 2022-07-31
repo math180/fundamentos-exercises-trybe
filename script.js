@@ -85,6 +85,34 @@ Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos
 
 👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor "rgb(238,238,238)".*/
 
+function changeBackgroundColor() {
+  const getHolidays = document.querySelectorAll('.holiday');
+  const newColor = 'red';
+  const originalColor = 'rgb(238,238,238)';
+  const getBtn = document.querySelector('#btn-holiday');
+
+getBtn.addEventListener('click', function() {
+
+  for (let i = 0; i < getHolidays.length; i += 1) {
+    if(getHolidays[i].style.backgroundColor === newColor) {
+      getHolidays[i].style.backgroundColor = originalColor
+    } else {
+      getHolidays[i].style.backgroundColor = newColor 
+    }
+  }
+}) 
+
+
+} changeBackgroundColor()
+
+
+
+
+
+
+
+
+
 /*function displayHolidays() { 
 
 let getButton = document.querySelector('#btn-holiday');
