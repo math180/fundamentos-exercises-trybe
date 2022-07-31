@@ -62,9 +62,12 @@ createDaysList();
 
 /* 🚀 Exercício 2:
 Implemente uma função que crie dinamicamente um botão com o nome "Feriados".
+
 Sua função deve receber um parâmetro com a string 'Feriados'
 Adicione a este botão a ID "btn-holiday"
+
 Adicione este botão como filho/filha da tag <div> com classe "buttons-container" */
+
 const getTag = document.getElementsByClassName("buttons-container")[0];
 function createButton(string) {
   const createBtn = document.createElement("button");
@@ -73,3 +76,47 @@ function createButton(string) {
   createBtn.innerHTML = string;
 }
 createButton("Feriados");
+
+/*🚀 Exercício 3:
+Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday".
+
+Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday"
+
+👀 É interessante que esse botão possua também a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor "rgb(238,238,238)".*/
+
+/*function displayHolidays() { 
+
+let getButton = document.querySelector('#btn-holiday');
+let getClasses = document.querySelectorAll('.holiday');
+let backgroundColor = 'rgb(238,238,238)';
+let newColor = 'green'
+
+getButton.addEventListener('click', function() {
+  for (let i = 0; i < getClasses.length; i += 1) {
+    if (getClasses[i].style.backgroundColor === newColor) {
+      getClasses[i].style.backgroundColor = backgroundColor;
+    } else {
+      getClasses[i].style.backgroundColor = newColor;
+    }    
+  }  
+});
+} function displayHolidays() {
+
+} displayHolidays()*/
+
+/*🚀 Exercício 4:
+Implemente uma função que crie dinamicamente um botão com o nome "Sexta-feira". Sua função deve receber como parâmetro a string "Sexta-feira".
+
+Adicione a esse botão o ID "btn-friday";
+
+Adicione esse botão como filho/filha da tag <div> com classe "buttons-container".
+
+*/
+
+function createDay(string) {
+  const createbtn2 = document.createElement("button");
+  createbtn2.id = "btn-friday";
+  getTag.appendChild(createbtn2);
+  createbtn2.innerHTML = string;
+}
+createDay("Sexta-feira");
