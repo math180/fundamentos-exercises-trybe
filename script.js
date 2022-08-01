@@ -182,12 +182,33 @@ function changeSize() {
   
   for (let value of getLi) {
   
-    value.addEventListener('mouseover', function(event) {
+    value.addEventListener('mouseover', function() {
       value.style.fontSize = 'xx-large'
     })
   
-    value.addEventListener('mouseout', function(event) {
+    value.addEventListener('mouseout', function() {
       value.style.fontSize = 'medium'
     })
   }
 } changeSize()
+
+/*🚀 Exercício 7:
+Implemente uma função que adicione uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+
+O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".*/
+
+const getBtn = document.querySelector('#btn-add')
+
+getBtn.addEventListener('click', function() {
+  const getInput = document.querySelector('#task-input').value;
+  console.log(getInput);
+  createTasks(getInput)
+})
+
+function createTasks(string) {
+  const createSpan = document.createElement('span');
+  const getMyTasks = document.querySelector('.my-tasks');
+  createSpan.innerHTML = string;
+  getMyTasks.appendChild(createSpan)
+} 
+
