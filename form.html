@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Mouse+Memoirs&family=Poppins:ital,wght@0,100;0,200;1,300&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Trybe-Trip</title>
+</head>
+
+<body>
+    <form action="" id="form">
+    <header>
+
+        <h3 id="h3" class="mb-5">Preencha o forulário abaixo para concorrer à uma viagem!</h1>
+
+            <p class="fs-5 mb-4">Dados Pessoais:</p>
+
+            <div class="row g-1 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">Nome:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text" id="inputPassword6" class="form-control" required
+                        placeholder="Digite seu nome completo" aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        Deve ter de 10 a 40 caracteres.
+                    </span>
+                </div>
+            </div>
+
+            <div class="row g-1 align-items-center">
+                <div class="col-auto">
+                    <label for="inputPassword6" class="col-form-label">E-mail:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="email" required placeholder="Digite seu e-mail" id="inputPassword6" class="form-control"
+                        aria-describedby="passwordHelpInline">
+                </div>
+                <div class="col-auto">
+                    <span id="passwordHelpInline" class="form-text">
+                        Deve ter de 10 a 50 caracteres.
+                    </span>
+                </div>
+            </div>
+
+            <p class="fs-5 mb-4 mt-3">Destino preferido:</p>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Cidade</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Campo</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio3">Praia</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio4">Montanhas</label>
+            </div>
+
+            <p class="fs-5 mb-4 mt-3">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?
+            </p>
+
+            <div class="form-floating">
+                <textarea class="form-control mb-4" placeholder="Leave a comment here" minlength="10" maxlength="500"
+                    id="floatingTextarea2" style="height: 70px"></textarea>
+                <label for="floatingTextarea2">Digite o motivo aqui </label>
+            </div>
+
+            <p class="fs-5 mb-4 mt-3">Qual a melhor data para realizar sua viagem?</p>
+
+            <div class="row g-1 align-items-center mb-4 mt-3">
+                <div class="col-auto">
+                    <label for="inputDate" class="col-form-label">Data da viagem:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="date" id="inputDate" class="form-control" required
+                        placeholder="Digite seu nome completo" aria-describedby="passwordHelpInline">
+                </div>
+            </div>
+
+            <p class="fs-5 mb-4 mt-3">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+            </p>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Sim</label>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="checkbox2">
+                <label class="form-check-label" for="checkbox2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+              </div>
+    </header>
+    <button type="submit" class="btn btn-outline-success">Enviar</button>
+
+    <button type="button" class="btn btn-outline-secondary" type="reset" value="Reset">Limpar</button>
+
+</form>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
