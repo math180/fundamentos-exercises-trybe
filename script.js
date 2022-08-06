@@ -5,3 +5,5 @@ let fromNow = age.fromNow();
 
 console.log('A sua idade atual é de:' + fromNow);
 
+const getButton = document.querySelector('#submit-btn');
+const getINputName = document.querySelector('#')
