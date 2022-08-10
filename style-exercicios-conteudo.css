@@ -99,3 +99,12 @@ p strong {
     background-color: #41197f;
   }
 }
+
+/* 4 - Sem alterar a classe trick, faça com que o texto dela apareça somente quando a tela estiver com menos de 500px de largura. */
+
+@media (max-width: 500px) {
+  p.trick {
+    font-size: 14px;
+    color: red;
+  }
+}
