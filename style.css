@@ -25,4 +25,12 @@
     justify-content: space-around;
     align-items: center;
     background-color: rgb(65, 65, 65);
+    color: white;
+  }
+
+  #p {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.2rem;
   }
