@@ -55,6 +55,7 @@
     background-color: rgb(118, 145, 136);
     margin: 0.2rem;
     border-radius: 10px;
+    padding: 2px;
   }
 
   hr {
@@ -62,8 +63,21 @@
     margin: 0 auto;
     height: 0.2rem;
     background-color: black;
+    
+  }
+
+  #hr {
+    margin-top: 0.6rem;
   }
 
   h3:hover {
     color: #0fa36b;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  #content-one {
+    margin-top: 2rem;
   }
