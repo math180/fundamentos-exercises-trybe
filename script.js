@@ -17,3 +17,9 @@ function testingScope(escopo) {
   }
 
   testingScope(true);
+
+// 2-🚀 Crie uma função que retorne um array em ordem crescente.
+
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+
+console.log(oddsAndEvens.sort((a, b) => a - b));
