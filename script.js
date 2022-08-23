@@ -177,3 +177,16 @@ console.log(everyoneBornInXX());
 const someBooksReleaseOnThe80s = () => books.some((book) => book.releaseYear > 1979 && book.releaseYear < 1990)
 
 console.log(someBooksReleaseOnThe80s());
+
+// 7 - Faça uma função que retorne true, caso nenhum author tenha nascido no mesmo ano, e false, caso contrário.
+
+const bornInTheSameYear = books[0].author.birthYear;
+
+const authorUnique = () => books.forEach((person) => {
+    if (person.author.birthYear === bornInTheSameYear) {
+        return false;
+    }
+    return true;
+}
+);
+console.log(authorUnique());
