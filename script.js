@@ -164,3 +164,10 @@ const expectedResult = [
   const booksOrdered = () => books.sort((first, second) => second.releaseYear - first.releaseYear)
 
   console.log(booksOrdered());
+
+// 🚀 5 - Faça uma função que retorne true, se todas as pessoas autoras nasceram no século XX, ou false, caso contrário.
+
+const everyoneBornInXX = () => books.every((people) => people.author.birthYear >= 1901 && people.author.birthYear <= 2000 )
+
+
+console.log(everyoneBornInXX());
