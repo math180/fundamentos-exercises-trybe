@@ -85,3 +85,16 @@ const books = [
   }
 
   console.log(firstPerson());
+
+//  2 - Retorne o nome do livro de menor nome.
+
+function smallerBooks() {
+    let nameBook = books[0].name
+
+   books.forEach((book) => {
+    if (book.name.length < nameBook.length) {
+        nameBook = book.name
+    }
+   });
+   return nameBook;
+} console.log(smallerBooks());
