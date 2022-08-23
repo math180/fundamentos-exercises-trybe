@@ -171,3 +171,9 @@ const everyoneBornInXX = () => books.every((people) => people.author.birthYear >
 
 
 console.log(everyoneBornInXX());
+
+// 🚀 6 - Faça uma função que retorne true, se algum livro foi lançado na década de 80, e false, caso contrário.
+
+const someBooksReleaseOnThe80s = () => books.some((book) => book.releaseYear > 1979 && book.releaseYear < 1990)
+
+console.log(someBooksReleaseOnThe80s());
