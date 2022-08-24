@@ -102,3 +102,10 @@ const fantasyOrScience = () => {
 }
 
 console.log(fantasyOrScience()) 
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const olderBooksFunction = () => {
+   return books.filter((book) => 2022 - book.releaseYear >= 60).map((book) => book.name)
+}
+console.log(olderBooksFunction()); 
