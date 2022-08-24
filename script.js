@@ -221,3 +221,25 @@ const mediaAuthores = (array) => {
 
 console.log(mediaAuthores(books));
 
+
+// 🚀 4- Encontre o livro com o maior nome.
+
+const biggestBook = () => {
+   return books.reduce((acc, curr) => {
+    if (acc.name.length > curr.name.length) {
+        return acc;
+    }
+   })
+}
+
+console.log(biggestBook());
+
+/* usando operador ternário:
+
+const biggestBookk = (array) => {
+    return array.reduce((acc, curr) => (acc.name.length > curr.name.length) ? acc.name : curr.name)
+ }
+ 
+ console.log(biggestBookk(books)); */
+
+ 
