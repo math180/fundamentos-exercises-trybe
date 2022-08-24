@@ -85,3 +85,36 @@ console.log(newObject());
 const everyGenre = () => books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica')
 
 console.log(everyGenre());
+
+// 4 - Crie um array formado pelos livros com mais de 60 anos desde sua publicação. Esse array deve ser ordenado do livro mais velho ao mais novo.
+
+const olderBooks = () => {
+   return books.filter((book) => 2022 - book.releaseYear >= 60)
+   .sort((book1, book2) => (book1.releaseYear - 2022) - (book2.releaseYear - 2022))
+}
+console.log(olderBooks());
+
+// 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+const fantasyOrScience = () => {
+    const genresRequires = ['Fantasia', 'Ficção Científica']
+    return books.filter((book) => genresRequires.includes(book.genre)).map((book) => book.author.name).sort()
+}
+
+console.log(fantasyOrScience()) 
+
+// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+
+const olderBooksFunction = () => {
+   return books.filter((book) => 2022 - book.releaseYear >= 60).map((book) => book.name)
+}
+console.log(olderBooksFunction()); 
+
+// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais (terminam com um ponto).
+
+const findPersonWithInitial = () => {
+   return books.filter((book) => book.author.name[1] === '.'
+    && book.author.name[4] === '.' && book.author.name[7] === '.').map((book) => book.name)
+}
+
+console.log(findPersonWithInitial());
