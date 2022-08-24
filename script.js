@@ -102,19 +102,3 @@ const fantasyOrScience = () => {
 }
 
 console.log(fantasyOrScience()) 
-
-// 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
-
-const olderBooksFunction = () => {
-   return books.filter((book) => 2022 - book.releaseYear >= 60).map((book) => book.name)
-}
-console.log(olderBooksFunction()); 
-
-// 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais (terminam com um ponto).
-
-const findPersonWithInitial = () => {
-   return books.filter((book) => book.author.name[1] === '.'
-    && book.author.name[4] === '.' && book.author.name[7] === '.').map((book) => book.name)
-}
-
-console.log(findPersonWithInitial());
