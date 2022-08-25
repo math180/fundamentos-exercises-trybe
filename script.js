@@ -221,16 +221,15 @@ const mediaAuthores = (array) => {
 
 console.log(mediaAuthores(books));
 
-
 // 🚀 4- Encontre o livro com o maior nome.
 
 const biggestBook = () => {
-   return books.reduce((acc, curr) => {
+  return books.reduce((acc, curr) => {
     if (acc.name.length > curr.name.length) {
-        return acc;
+      return acc;
     }
-   })
-}
+  });
+};
 
 console.log(biggestBook());
 
@@ -242,22 +241,54 @@ const biggestBookk = (array) => {
  
  console.log(biggestBookk(books)); */
 
- //🚀 5- Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+//🚀 5- Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
 
- const names = [
-    'Aanemarie', 'Adervandes', 'Akifusa',
-    'Abegildo', 'Adicellia', 'Aladonata',
-    'Abeladerco', 'Adieidy', 'Alarucha',
-  ];
-  
+const names = [
+  "Aanemarie",
+  "Adervandes",
+  "Akifusa",
+  "Abegildo",
+  "Adicellia",
+  "Aladonata",
+  "Abeladerco",
+  "Adieidy",
+  "Alarucha",
+];
+
 const namesQtd = (array) => {
-   return array.reduce((acc, curr) => 
-      acc + curr.split('').reduce((acumulator, current) => {
-        if (current === 'a' || current === 'A') return acumulator + 1;
-        return acumulator
-      }, 0), 0);
-}
+  return array.reduce(
+    (acc, curr) =>
+      acc +
+      curr.split("").reduce((acumulator, current) => {
+        if (current === "a" || current === "A") return acumulator + 1;
+        return acumulator;
+      }, 0),
+    0
+  );
+};
 
- console.log(namesQtd(names));
+console.log(namesQtd(names));
 
- 
+// 🚀 6- Para o próximo exercício você deve criar um novo array de objetos a partir das informações das constantes students e grades, onde cada objeto desse novo array terá o formato { name: nome do aluno, average: media das notas }. Para isso vamos assumir que a posição do index 0 de grades refere-se ao estudante na posição de index 0 de students. Para resolver este exercício, além de reduce, será necessário utilizar também a função map. Dica: Você pode acessar o index do array dentro de map, e você pode ver o objeto esperado na constante expected.
+
+const students = ["Pedro Henrique", "Miguel", "Maria Clara"];
+const grades = [
+  [9, 8, 10, 7, 5],
+  [10, 9, 9, 10, 8],
+  [10, 7, 10, 8, 9],
+];
+
+const newArray = () => {
+  return students.map((student, index) => ({
+    name: student,
+    average: grades[index].reduce((acc, curr) => acc + curr) / grades[index].length,
+  }));
+};
+
+console.log(newArray());
+
+const expected = [
+  { name: "Pedro Henrique", average: 7.8 },
+  { name: "Miguel", average: 9.2 },
+  { name: "Maria Clara", average: 8.8 },
+];
