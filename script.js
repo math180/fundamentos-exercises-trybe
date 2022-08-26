@@ -107,3 +107,15 @@ const allAustraliansBornIn20s = (array) => {
 }
 
 console.log(allAustraliansBornIn20s(people));
+
+// 5 - Escreva a função swap, que dado um array de 3 elementos, retorna um novo array com o primeiro e terceiro elementos trocados. Detalhe: você precisa fazer essa função gastando somente 1 linha. O retorno da função utilizando o array myList deve ser [3, 2, 5].
+
+// Usando array destructuring:
+
+const myList = [5, 2, 3];
+
+// escreva swap abaixo
+
+const swap = ([ five, two, three ]) => [three, two, five]
+
+console.log(swap(myList));
