@@ -29,6 +29,21 @@ const jupiter = {
   },
 };
 
-console.log(planetDistanceFromSun(mars)); // A
-setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
-setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
+// console.log(planetDistanceFromSun(mars)); // A
+// setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
+// setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
+
+// 3 - A função getPlanet abaixo imprime o planeta Marte de forma síncrona. Modifique a função getPlanet, de forma que Marte seja impresso assincronamente, após 4 segundos.
+
+const getPlanet = () => {
+  const mars = {
+    name: 'Mars',
+    distanceFromSun: {
+      value: 227900000,
+      measurementUnit: 'kilometers',
+    },
+  };
+  setTimeout(() => console.log('Returned planet: ', mars), 4000);
+};
+
+getPlanet(); // Imprime Marte depois de 4 segundos
