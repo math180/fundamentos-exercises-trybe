@@ -1,16 +1,34 @@
-// callbacks-para-fixar-01.js
+// 2 - Observe o código abaixo e responda: qual é a ordem de finalização de execução das linhas comentadas?
 
-const userFullName = ({ firstName, lastName }) => `Olá! Meu nome é ${firstName} ${lastName}`;
-const userNationality = ({ firstName, nationality }) => `${firstName} é ${nationality}`;
+const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
+  `${name} está a ${value} ${measurementUnit} de distância do Sol`;
 
-const getUser = (callback) => {
-  const user = {
-    firstName: 'Ivan',
-    lastName: 'Ivanovich',
-    nationality: 'Russo',
-  };
-  return callback(user)
+const MEASUREMENT_UNIT = 'quilômetros';
+
+const mars = {
+  name: 'Marte',
+  distanceFromSun: {
+    value: 227900000,
+    measurementUnit: MEASUREMENT_UNIT,
+  },
 };
 
-console.log(getUser(userFullName)); // Retorno esperado: "Olá! Meu nome é Ivan Ivanovich"
-console.log(getUser(userNationality)); // Retorno esperado: "Ivan é Russo"
+const venus = {
+  name: 'Venus',
+  distanceFromSun: {
+    value: 108200000,
+    measurementUnit: MEASUREMENT_UNIT,
+  },
+};
+
+const jupiter = {
+  name: 'Jupiter',
+  distanceFromSun: {
+    value: 778500000,
+    measurementUnit: MEASUREMENT_UNIT,
+  },
+};
+
+console.log(planetDistanceFromSun(mars)); // A
+setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
+setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
