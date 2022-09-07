@@ -52,7 +52,7 @@ const getPlanet = () => {
 // A função sendMarsTemperature imprima no console o seguinte texto: "A temperatura de Marte é: temperaturaAtual graus celsius" onde, temperaturaAtual é o valor recebido da função getMarsTemperature; e
 // A mensagem deve ser impressa no console depois de no máximo 5 segundos.
 
-const messageDelay = () => Math.floor(Math.random() * 5000);
+/* const messageDelay = () => Math.floor(Math.random() * 5000);
 
 const getMarsTemperature = () => {
   const maxTemperature = 58;
@@ -67,3 +67,41 @@ const sendMarsTemperature = () => {
 } // Imprime "A temperatura de Marte é: 20 graus celsius", por exemplo
 
 sendMarsTemperature();
+
+*/
+
+/* 5 - Agora que você fez a função que envia a temperatura de Marte, vamos utilizar essa temperatura para realizar outras operações. No código abaixo, temos as funções temperatureInFahrenheit e greet. Elas irão utilizar a temperatura obtida pela função getMarsTemperature para realizar nossas operações. Escreva a função sendMarsTemperature de forma que:
+
+A função sendMarsTemperature receba uma callback;
+
+Dica: Essa callback será uma de nossas funções: temperatureInFahrenheit ou greet;
+
+A função sendMarsTemperature execute essa callback depois de no máximo 5 segundos.
+
+Dica: Lembre-se de nossa função messageDelay para gerar o tempo de espera necessário.
+*/
+
+const messageDelay = () => Math.floor(Math.random() * 5000);
+
+const getMarsTemperature = () => {
+  const maxTemperature = 58;
+  return Math.floor(Math.random() * maxTemperature);
+};
+
+const toFahrenheit = (degreeCelsius) => (degreeCelsius * (9 / 5)) + 32;
+
+const temperatureInFahrenheit = (temperature) =>
+  console.log(`Atualmente está ${toFahrenheit(temperature)}ºF em Marte`);
+
+const greet = (temperature) =>
+  console.log(`Olá! Curiosity aqui. Nesse momento está ${temperature}ºC em Marte`);
+
+// Definição da função sendMarsTemperature...
+
+const sendMarsTemperature = (onSuccess) => {
+  const currentTemperature = getMarsTemperature()
+  setTimeout(() => onSuccess(currentTemperature), messageDelay());
+}; 
+
+console.log(sendMarsTemperature(temperatureInFahrenheit));
+console.log(sendMarsTemperature(greet));
